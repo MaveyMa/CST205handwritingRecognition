@@ -4,8 +4,7 @@ def getSquare(im, threshold):
     return im.crop(getBox(im, threshold))
     
 def getBox(im, threshold):
- width = im.width
- height = im.height
+ width, height = im.size
  pix = im.load()
 	
  xmin = width

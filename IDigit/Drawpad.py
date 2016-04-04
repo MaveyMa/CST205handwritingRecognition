@@ -1,5 +1,4 @@
 import pygame
-import sys
 from PIL import Image
 
 class DrawPad():
