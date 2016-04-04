@@ -27,16 +27,13 @@ def dibujar():
     canvas_height = 350
     #c = Tk()
     #INSTRUCTIONS IN UPPER RIGHT HAND CORNER
-    welcome = Label(master, text = "Welcome to iDigit.",
-                    font=courierText)
-    welcome.place(x=0,y=0)
     message = Label(master, text = "Press & slowly drag the mouse to draw.",
                     font=courierText)
     message.place(x=0,y=25)
     #WHITE CANVAS
-    w = Canvas(master, width=canvas_width, height=canvas_height, bg="white")
-    w.place(x=175, y=100)
-    w.bind("<B1-Motion>", paint)
+    d = Canvas(master, width=canvas_width, height=canvas_height)
+    #d.place(x=175, y=100)
+    d.bind("<B1-Motion>", paint)
     #CLEAR CANVAS
     clean = Button(master, text="CLEAR CANVAS", font=courierFont, 
                    fg="black", bg="white",
@@ -64,6 +61,10 @@ courierFont = tkFont.Font(family="Courier", size=21, weight=tkFont.BOLD)
 courierText = tkFont.Font(family="Courier", size=15, weight=tkFont.BOLD)
 #WINDOW TITLE
 master.title("i d i g i t     [Number Identifier]")
+#WELCOME TEXT
+welcome = Label(master, text = "Welcome to iDigit.",
+                    font=courierText)
+welcome.place(x=0,y=0)
 #NOTE: TOP FRAME IS DEFAULT
 #BOTTOM LOCATION
 bottomFrame = Frame(master)
